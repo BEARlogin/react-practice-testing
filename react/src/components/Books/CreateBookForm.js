@@ -43,13 +43,13 @@ function CreateBookForm() {
           <label htmlFor="bookName" className="form-label">Book Title</label>
           <input type="text" className="form-control" id="bookName" ref={elementsRef.current.name}
                  onChange={e => inputRef.current.name = e.target.value} />
-          {errors.bookName && <span className="form_error">This field is required</span>}
+          {errors.bookName && <span className="form_error" data-testid='book-name-error-message'>This field is required</span>}
         </div>
         <div className="create_book_input col-md-6">
           <label htmlFor="bookAuthor" className="form-label">Book Author</label>
           <input type="text" className="form-control" id="bookAuthor" ref={elementsRef.current.author}
                  onChange={e => inputRef.current.author = e.target.value} />
-          {errors.bookAuthor && <span className="form_error">This field is required</span>}
+          {errors.bookAuthor && <span className="form_error" data-testid='book-author-error-message'>This field is required</span>}
         </div>
         <div className="create_book_form_add_btn_wrapper">
             <button type="submit" className="btn btn-primary" data-testid="create_book_button">Create book</button>
